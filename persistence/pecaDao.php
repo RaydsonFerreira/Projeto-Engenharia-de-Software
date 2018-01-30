@@ -4,7 +4,7 @@ include_once("../model/peca.php");
 
 Class PecaDAO{
     function Buscar($peca, $link){
-        if($peca->getdescicaoPeca()!= ''){
+        if($peca->getdescicaoPeca() != ''){
             $SQL = "SELECT * FROM Peca WHERE descricaoPeca = '".$peca->getdescicaoPeca()."';";
         }
         else{
@@ -39,6 +39,8 @@ Class PecaDAO{
 
     function Cadastrar($peca, $link){
         $SQL = "INSERT INTO Peca VALUES (".$peca->getnSerie().",'".$peca->getdescicaoPeca()."',".$peca->getprecoPeca().",".$peca->getquantEstoque().");";
+        
+        echo $SQL;
         
         if(!mysqli_query($link,$SQL)){
 			die("ERRO NO CADASTRO!");

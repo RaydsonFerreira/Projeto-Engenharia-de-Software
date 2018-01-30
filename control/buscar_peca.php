@@ -14,7 +14,7 @@
     $pecadao = new PecaDao();
     $retorno = $pecadao->Buscar($p, $link);
     if($retorno){
-        echo "Numero de Serie - Descricao - Preco pessa - Quantidade <br>";
+        echo "Numero de Serie - Descricao - Preco peça - Quantidade <br>";
     }
     
     while($rs = $retorno->fetch_array()){

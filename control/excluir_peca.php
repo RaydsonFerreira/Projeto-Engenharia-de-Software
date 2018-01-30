@@ -13,3 +13,7 @@
 
     $pecadao = new PecaDao();
     $retorno = $pecadao->Excluir($p, $link);
+
+    $conexao->fechar();
+
+?>

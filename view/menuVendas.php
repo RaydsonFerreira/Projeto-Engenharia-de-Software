@@ -39,16 +39,18 @@
 		</header>
 		<section>
 			<h1>Vendas</h1>
-			<div class="row row-max-400">
-				<div class="col-lg-12">
-					<div class="input-group">
-						<input type="text" class="form-control input-text" placeholder="Número do Orçamento">
-						<span class="input-group-btn">
-						<button class="btn btn-default btn-amarelo" type="button">Buscar</button>
-						</span>
+			<form action="../control/buscar_orçamento.php" method="GET">
+				<div class="row row-max-400">
+					<div class="col-lg-12">
+						<div class="input-group">
+							<input type="text" name="numero" class="form-control input-text" placeholder="Número do Orçamento">
+							<span class="input-group-btn">
+							<button class="btn btn-default btn-amarelo" type="submmit">Buscar</button>
+							</span>
+						</div>
 					</div>
-					</div>
-			</div>
+				</div>
+			</form>
 			<div class="btn-acoes">
 				<span class="input-group-btn btn-vendas">
 					<button class="btn btn-default btn-amarelo" type="button">Visualizar</button>
@@ -63,8 +65,8 @@
 
 			<div class="row row-btn-clientes row-max-400">
 				
-				<a href="#" class="btn btn-amarelo btn-clientes">Cadastrar Cliente</a><br>
-				<a href="#" class="btn btn-amarelo btn-clientes">Buscar Cliente</a>
+				<a href="cadastroCliente.php" class="btn btn-amarelo btn-clientes">Cadastrar Cliente</a><br>
+				<a href="buscarCliente.php" class="btn btn-amarelo btn-clientes">Buscar Cliente</a>
 			
 			</div>
 

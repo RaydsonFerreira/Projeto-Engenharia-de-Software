@@ -6,6 +6,7 @@
 
     $username = $_GET['nome'];
     $senha = $_GET['senha'];
+    $stringg = $_GET['string'];
     
     $conexao = new Connection('localhost', 'root', '', 'Oficina');
     $link = $conexao->getlink();
@@ -14,9 +15,9 @@
 
     $clientedao = new ClienteDao();
     $retorno = $clientedao->Logar($c, $link);
-
+    
     if($retorno){
-        header("Location:../view/pedirOrcamento.php");
+        header("Location:../view/pedirOrcamento.php?username=$username");
     }
     else{
         header("Location:../view/loginCliente.php");

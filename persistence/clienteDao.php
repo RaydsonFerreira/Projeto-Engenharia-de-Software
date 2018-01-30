@@ -1,5 +1,6 @@
 <?php
 
+header('Content-Type: text/html; charset=iso-8859-1');
 include_once("../model/cliente.php");
 
 Class ClienteDAO{
@@ -25,8 +26,10 @@ Class ClienteDAO{
 	}
 	
 	function Consultar($cliente, $link){
-		$SQL = "SELECT * FROM cliente WHERE nome = '".$cliente->getNome()."';";
-		echo $SQL;
+		if($cliente->getnomeCliente() != ''){
+			$SQL = utf8_encode("SELECT * FROM Cliente WHERE nomeCliente like '%".$cliente->getnomeCliente()."%';");
+		}
+		else $SQL = "SELECT * FROM Cliente;";
 		
 		$retorno = mysqli_query($link,$SQL);
 		if(!$retorno){

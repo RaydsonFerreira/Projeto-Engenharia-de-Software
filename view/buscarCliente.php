@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+	<meta charset="utf-8" />
 	<head>
-		<meta charset="utf-8">
+		<meta charset="iso-8859-1">
 		<title>Mechanic Helper</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -41,24 +42,19 @@
 
 		<section>
 			<h1>Buscar Cliente</h1>
-			<form action="" method="GET">
+			<form action="../control/buscar_cliente.php" method="GET">
 				<div class="label-dados">
-					<p class="nome-dados">CNPJ/CPF  </p>
-					<input type="text" id="cadastro" name="Cadastro" class="form-control input-dados">
+					<p class="nome-dados">Nome  </p>
+					<input type="text" id="nome" name="nome" class="form-control input-dados">
 				</div>
-				<div class="label-dados">
-					<p class="nome-dados">Username  </p>
-					<input type="text" id="username" name="username" class="form-control input-dados">
+				<div class="row row-max-400">
+					<div class="col-lg-12">
+						<span class="input-group-btn">
+							<button class="btn btn-default btn-amarelo btn-search" type="submit">Buscar</button>
+						</span>
+					</div>
 				</div>
 			</form>
-
-			<div class="row row-max-400">
-				<div class="col-lg-12">
-					<span class="input-group-btn">
-						<button class="btn btn-default btn-amarelo btn-search" type="button">Buscar</button>
-					</span>
-				</div>
-			</div>
 			<div class="btn-acoes">
 				<span class="input-group-btn btn-busca">
 					<button class="btn btn-default btn-amarelo" type="button">Alterar</button>

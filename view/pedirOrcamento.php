@@ -39,7 +39,7 @@
         </header>
 		<section>
 			<h1>Fazer Pedido de Orcamento</h1>
-			<form action="" method="GET">
+			<form action="../control/pedido_orcamento.php?codigo=<?php $_GET['username']; ?>" method="GET">
 				<div class="label-dados input-orcamento">
 					<textarea id="pedidoOrcamento" name="pedidoOrcamento" class="form-control input-dados" placeholder="Escreva seu pedido"></textarea><br>
 					<span class="input-group-btn btn-mecanico">

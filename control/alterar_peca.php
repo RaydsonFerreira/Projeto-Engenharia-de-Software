@@ -16,4 +16,6 @@
 
     $pecadao = new PecaDao();
     $retorno = $pecadao->alterar($p, $link);
+
+    $conexao->fechar();
 ?>

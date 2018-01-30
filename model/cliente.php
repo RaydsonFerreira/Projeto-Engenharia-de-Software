@@ -2,7 +2,6 @@
 class Cliente{
     var $usernameCliente;
     var $senhaCliente;
-    var $cpfCliente;
     var $nomeCliente;
     var $ruaCliente;
     var $nEndCliente;
